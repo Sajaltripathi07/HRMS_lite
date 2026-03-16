@@ -2,11 +2,6 @@
 
 A lightweight Human Resource Management System for managing employee records and tracking daily attendance.
 
-## Live Demo
-
-- **Frontend:** `https://hrms-lite.vercel.app` _(deploy and update this URL)_
-- **Backend API:** `https://hrms-lite-api.onrender.com` _(deploy and update this URL)_
-
 ## Features
 
 - Add, view, and delete employees
@@ -28,40 +23,6 @@ A lightweight Human Resource Management System for managing employee records and
 | Deploy FE | Vercel                          |
 | Deploy BE | Render                          |
 
-## Project Structure
-
-```
-hrms-lite/
-├── backend/
-│   ├── src/
-│   │   ├── config/db.js
-│   │   ├── middleware/validate.js
-│   │   ├── models/
-│   │   │   ├── Employee.js
-│   │   │   └── Attendance.js
-│   │   ├── routes/
-│   │   │   ├── employees.js
-│   │   │   └── attendance.js
-│   │   └── index.js
-│   ├── .env.example
-│   └── package.json
-└── frontend/
-    ├── src/
-    │   ├── components/
-    │   │   ├── Layout.jsx
-    │   │   └── UI.jsx
-    │   ├── pages/
-    │   │   ├── Dashboard.jsx
-    │   │   ├── Employees.jsx
-    │   │   ├── EmployeeDetail.jsx
-    │   │   └── Attendance.jsx
-    │   ├── services/api.js
-    │   ├── App.jsx
-    │   ├── main.jsx
-    │   └── index.css
-    ├── index.html
-    └── package.json
-```
 
 ## Local Setup
 
@@ -113,22 +74,6 @@ Frontend will run on `http://localhost:5173`
 | POST   | /api/attendance              | Mark/update attendance          |
 | GET    | /api/attendance/employee/:id | Records + totals for one employee |
 
-## Deployment
-
-### Backend → Render
-
-1. Push repo to GitHub
-2. Create a new **Web Service** on [Render](https://render.com)
-3. Connect the repo, set root directory to `backend`
-4. Build command: `npm install`, Start command: `npm start`
-5. Add environment variable `MONGODB_URI` (use MongoDB Atlas)
-
-### Frontend → Vercel
-
-1. Create a new project on [Vercel](https://vercel.com)
-2. Connect the repo, set root directory to `frontend`
-3. Add environment variable `VITE_API_URL` pointing to your Render backend URL
-4. Deploy
 
 ## Assumptions & Limitations
 
